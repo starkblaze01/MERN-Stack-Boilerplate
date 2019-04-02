@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 
 const users = require("./routers/api/users");
 const profile = require("./routers/api/profile");
@@ -8,6 +9,10 @@ const projects = require("./routers/api/projects");
 const app = express();
 
 app.get("/", (req, res) => res.send("Hello!"));
+
+// Body Parser middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // DB Config
 const db = require("./config/keys").mongoURI;
