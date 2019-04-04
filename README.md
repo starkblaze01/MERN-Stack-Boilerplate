@@ -3,7 +3,7 @@
 ## To run the project-
 
 > npm install
-> npm run server
+> npm run dev
 
 ### Under Development
 
