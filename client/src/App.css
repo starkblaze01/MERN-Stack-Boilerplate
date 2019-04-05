@@ -2,9 +2,13 @@ img {
   width: 100%;
 }
 
+.mid {
+  min-height: 100vh;
+}
+
 .landing {
   position: relative;
-  background: url("./img/crypto.jpg") no-repeat;
+  background: url("./img/iot.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
