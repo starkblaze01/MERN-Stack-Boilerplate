@@ -57,3 +57,21 @@ export const logoutUser = () => dispatch => {
   // set current user to {} and isAuthenticated to false
   dispatch(setCurrentUser({}));
 };
+
+// Get current User data
+export const getCurrentUser = () => dispatch => {
+  axios
+    .post("api/users/current")
+    .then(res => {
+      dispatch({
+        type: SET_CURRENT_USER,
+        payload: res.data
+      });
+    })
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};

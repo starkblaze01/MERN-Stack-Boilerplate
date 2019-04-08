@@ -12,6 +12,7 @@ import Footer from "./components/layout/Footer";
 import Home from "./components/layout/Home";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
+import Dashboard from "./components/Dashboard";
 import "./App.css";
 
 // Check for token
@@ -41,6 +42,7 @@ class App extends Component {
             <Navbar />
             <Route exact path="/" component={Home} />
             <div className="container">
+              <Route exact path="/dashboard" component={Dashboard} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
             </div>
