@@ -5,9 +5,14 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 
 class Navbar extends Component {
+  constructor() {
+    super();
+    this.onLougoutClick = this.onLougoutClick.bind(this);
+  }
+
   onLougoutClick(e) {
     e.preventDefault();
-    this.props.logoutUser();
+    this.props.logoutUser(this.props.history);
   }
 
   render() {
@@ -16,11 +21,7 @@ class Navbar extends Component {
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
-          <a
-            href="/"
-            onClick={this.onLougoutClick.bind(this)}
-            className="nav-link"
-          >
+          <Link onClick={this.onLougoutClick.bind(this)} className="nav-link">
             <img
               className="rounded-circle"
               src={user.avatar}
@@ -29,7 +30,7 @@ class Navbar extends Component {
               style={{ width: "30px", marginRight: "5px" }}
             />
             {""} LogOut
-          </a>
+          </Link>
         </li>
       </ul>
     );
