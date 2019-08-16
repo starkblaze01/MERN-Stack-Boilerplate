@@ -2,7 +2,8 @@
 
 ## Install Dependencies-
 
-> npm install
+- npm install
+- npm run client-install
 
 ## To run the project-
 
