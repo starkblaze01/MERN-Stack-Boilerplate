@@ -1,4 +1,4 @@
-# Senz-Admin-Portal
+# MERN Stack Bolierplate
 
 ## Install Dependencies-
 
